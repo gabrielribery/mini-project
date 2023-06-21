@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script id="script" src="script.js"></script>
-    <link id="stylesheet" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Feedback</title>
 </head>
 
 <body>
 
-    <!-- Navbar aus gruppenarbeit kopiert-->
+    <!-- Navbar aus Gruppenarbeit kopiert -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -23,52 +20,52 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav    <script id="modeScript" src="normalmode.js"></script>
-                    <link id="modeStyle" rel="stylesheet" href="normalmode.css">"nav-link" href="#">Disabled</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Disabled</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- content -->
+    <!-- Content -->
     <div class="container mt-4">
         <div class="row">
             <div class="col-4">
-                <!--linke spalte-->
-                <!--evtl good button hier an rand richtung mitte?-->
+                <!-- Linke Spalte -->
+                <!-- Evtl. Good Button hier am Rand in Richtung Mitte? -->
             </div>
+
             <div class="col-4">
-                <!-- feedback-->
-                <i class="bi bi-emoji-smile"></i></i> <!--standart emoji-->
+                <!-- Feedback -->
+                <i class="bi bi-emoji-smile"></i> <!-- Standard-Emoji -->
                 <div class="mt-4">
                     <button id="button1" class="btn btn-primary">Button 1</button>
                     <button id="button2" class="btn btn-secondary">Button 2</button>
                 </div>
-                <p id="text"></p> <!--hier wird der text ausgegeben nach drücken des buttons-->
+                <p id="text"></p> <!-- Hier wird der Text nach dem Drücken des Buttons ausgegeben -->
             </div>
+
             <div class="col-4">
-                <!--rechte spalte-->
-                <!--evtl bad button hier an rand richtung mitte?-->
+                <!-- Rechte Spalte -->
+                <!-- Evtl. Bad Button hier am Rand in Richtung Mitte? -->
             </div>
         </div>
     </div>
 
-    <script> //script hier da extern nicht fuktioniert
+    <script>
         var button1 = document.getElementById('button1');
         var button2 = document.getElementById('button2');
         var text = document.getElementById('text');
-        var icon = document.querySelector('.feedback-icon');
 
         button1.addEventListener('click', function () {
             text.textContent = 'Danke für dein Feedback';
-            icon.className = '<i class="bi bi-emoji-heart-eyes"></i>'; //heart icon
+            text.className = 'green-text';
         });
 
         button2.addEventListener('click', function () {
             text.textContent = 'Negatives Feedback ist nicht möglich. Bitte versuche es nochmals';
-            icon.className = '<i class="bi bi-emoji-dizzy"></i>'; //bad icon
+            text.className = 'red-text';
         });
-
     </script>
 
 </body>
