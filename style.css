@@ -1,0 +1,11 @@
+/* bttons anpassen noch margin etc für schönere darstellung */
+#button1 {
+    background-color: #0aa01c;
+    border-color: #0aa01c;
+}
+
+#button2 {
+    background-color: #be100a;
+    border-color: #be100a;
+}
+
